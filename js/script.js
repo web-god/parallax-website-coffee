@@ -1,5 +1,5 @@
 $(document).ready (function(){
-// EFECTO MENU
+
     $('.menu a').each(function(index, elemento){
         $(this).css({
             'top': '-200px'
@@ -10,31 +10,31 @@ $(document).ready (function(){
         }, 2000 + (index * 500));
     });
 
-    //EFECTO HEADER
+    
 
     if( $(window).width() > 800){
-        $('header .textos').css ({
+        $('header .text').css ({
             opacity: 0,
             marginTop: 0
         });
 
-        $('header .textos').animate ({
+        $('header .text').animate ({
             opacity: 1,
             marginTop: '-52px'
         }, 1500);
 
     }
 
-// SCROLL ELEMENTOS MENU
-    var acercaDe = $('#acerca-de').offset().top,
-        menu = $('#platillos').offset().top,
-        galeria = $('#galeria').offset().top,
-        ubicacion = $('#ubicacion').offset().top;
 
-    $('#btn-acerca-de').on('click', function(e){
+    var about = $('#about').offset().top,
+        menu = $('#plat').offset().top,
+        gallery = $('#gallery').offset().top,
+        location = $('#location').offset().top;
+
+    $('#btn-about').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop:  acercaDe - 100
+            scrollTop:  about - 100
         }, 500);
     });
 
@@ -45,17 +45,17 @@ $(document).ready (function(){
         }, 500);
     });
 
-    $('#btn-galeria').on('click', function(e){
+    $('#btn-gallery').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: galeria
+            scrollTop: gallery
         }, 500);
     });
 
-    $('#btn-ubicacion').on('click', function(e){
+    $('#btn-location').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: ubicacion
+            scrollTop: location
         }, 500);
     });
 

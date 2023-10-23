@@ -6,11 +6,11 @@ $(document).ready (function(){
         if(windowWidth > 800){
             var scroll = $(window).scrollTop();
 
-            $('header .textos').css({
+            $('header .text').css({
                 'transform': 'translate(0px,' + scroll / 2 + '%)'
             });
 
-            $('.acerca-de article').css({
+            $('.about article').css({
                 'transform': 'translate(0px, -' + scroll / 4 + '%)'
             });
 
@@ -20,7 +20,7 @@ $(document).ready (function(){
     $(window).resize(function(){
         var windowWidth = $(window).width();
         if(windowWidth < 800){
-            $('.acerca-de article').css({
+            $('.about article').css({
                 'transform': 'translate(0px, 0px)'
             });
         }
